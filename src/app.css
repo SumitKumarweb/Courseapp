@@ -1,0 +1,318 @@
+/* Common styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Navbar styles */
+.navbar {
+  background-color: #333;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+.navbar-logo {
+  font-size: 24px;
+  font-weight: bold;
+  margin-left: 20px;
+}
+
+.navbar-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-link {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.navbar-link:hover {
+  background-color: #555;
+}
+
+/* Mobile menu styles */
+.navbar-menu-mobile {
+  display: none;
+}
+
+.navbar-toggle {
+  display: none;
+  cursor: pointer;
+  padding: 10px;
+  background-color: transparent;
+  border: none;
+}
+
+@media screen and (max-width: 768px) {
+  .navbar-menu {
+    display: none;
+  }
+
+  .navbar-menu-mobile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+  }
+
+  .navbar-menu-mobile.show {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .navbar-toggle {
+    display: block;
+  }
+
+  .navbar-link {
+    display: block;
+    margin: 5px;
+  }
+}
+
+/* Header styles */
+header {
+  background-color: #ffffff;
+  color: #000000;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Course section styles */
+.course-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 20px;
+}
+
+.course-card {
+  width: 300px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 20px;
+  margin: 10px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.course-card h2 {
+  color: #333;
+}
+
+.course-card p {
+  color: #666;
+}
+
+.enroll-button {
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.enroll-button:hover {
+  background-color: #2184b0;
+}
+
+/* Course curriculum styles */
+.course-curriculum {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.course-curriculum h2 {
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.module {
+  margin-bottom: 20px;
+}
+
+.module-title {
+  background-color: #3498db;
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px 5px 0 0;
+}
+
+.lesson {
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+.lesson:last-child {
+  border: none;
+}
+
+/* Value proposition styles */
+.value-section {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.value-box {
+  width: 300px;
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.value-box:hover {
+  transform: scale(1.05);
+}
+
+.value-box h2 {
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.value-box p {
+  color: #666;
+}
+ 
+/* Pricing section styles */
+.pricing-section {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.price-box {
+  width: 300px;
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #f1f1f1;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.price-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.price-box h2 {
+  color: #333;
+  margin-bottom: 10px;
+}
+
+/* Success quotes styles */
+.success-quotes {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.quote {
+  font-style: italic;
+  color: #666;
+  margin-bottom: 10px;
+  opacity: 1;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+/* Keyframes for quote animation */
+@keyframes fadeInUp {
+  0% {
+    opacity: 1;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(0);
+  }
+}
+ 
+
+header h1 {
+  font-size: 32px;
+  margin: 0;
+}
+
+main {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+}
+
+.about-section h2,
+.services-section h2,
+.contact-section h2 {
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.services-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.services-section li {
+  margin-bottom: 5px;
+}
+
+.contact-section a.contact-button {
+  display: inline-block;
+  background-color: #3498db;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.contact-section a.contact-button:hover {
+  background-color: #2184b0;
+}
+
+footer {
+  text-align: center;
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+}
